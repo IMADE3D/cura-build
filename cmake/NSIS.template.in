@@ -1012,9 +1012,6 @@ Function .onInit
   StrCmp "@CPACK_NSIS_ENABLE_UNINSTALL_BEFORE_INSTALL@" "ON" 0 inst
   IfSilent inst 0
 
-  !insertmacro uninstallVersion "Imade3D Cura 3.5" "Imade3D Cura 3.5" "U35"
-  !insertmacro uninstallVersion "Imade3D Cura @CPACK_PACKAGE_VERSION_MAJOR@.@CPACK_PACKAGE_VERSION_MINOR@" "@CPACK_PACKAGE_INSTALL_REGISTRY_KEY@" "latest"
-  !insertmacro uninstallVersion "Cura IMADE3D Edition 3.5" "Cura IMADE3D Edition 3.5" "U35"
   !insertmacro uninstallVersion "Cura IMADE3D Edition @CPACK_PACKAGE_VERSION_MAJOR@.@CPACK_PACKAGE_VERSION_MINOR@" "@CPACK_PACKAGE_INSTALL_REGISTRY_KEY@" "latest"
 
 inst:
