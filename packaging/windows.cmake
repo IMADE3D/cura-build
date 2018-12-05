@@ -53,24 +53,24 @@ endif()
 
 include(CPackComponent)
 
-cpack_add_component(_cura DISPLAY_NAME "Ultimaker Cura Executable and Data Files" REQUIRED)
+cpack_add_component(_cura DISPLAY_NAME "Cura IMADE3D Edition Executable and Data Files" REQUIRED)
 cpack_add_component(vcredist DISPLAY_NAME "Install Visual Studio 2015 Redistributable")
 cpack_add_component(arduino DISPLAY_NAME "Install Arduino Drivers")
 
 set(CPACK_GENERATOR "NSIS")
-set(CPACK_PACKAGE_NAME "Ultimaker Cura")
+set(CPACK_PACKAGE_NAME "Cura IMADE3D Edition")
 string(REPLACE " " "" CPACK_PACKAGE_NAME_NO_WHITESPACES ${CPACK_PACKAGE_NAME})
 set(CPACK_PACKAGE_VENDOR "Ultimaker")
 set(CPACK_PACKAGE_VERSION_MAJOR ${CURA_VERSION_MAJOR})
 set(CPACK_PACKAGE_VERSION_MINOR ${CURA_VERSION_MINOR})
 set(CPACK_PACKAGE_VERSION_PATCH ${CURA_VERSION_PATCH})
 set(CPACK_PACKAGE_VERSION ${CURA_VERSION})
-set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Ultimaker Cura - 3D Printing Software")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Cura IMADE3D Edition - 3D Printing Software")
 set(CPACK_RESOURCE_FILE_LICENSE ${CMAKE_SOURCE_DIR}/packaging/cura_license)
-set(CPACK_PACKAGE_CONTACT "Arjen Hiemstra <a.hiemstra@ultimaker.com>")
+set(CPACK_PACKAGE_CONTACT "Arjen Hiemstra <vojta@imade3d.com>")
 
-set(CPACK_PACKAGE_EXECUTABLES Cura "Ultimaker Cura ${CURA_VERSION_MAJOR}.${CURA_VERSION_MINOR}.${CURA_VERSION_PATCH}")
-set(CPACK_PACKAGE_INSTALL_DIRECTORY "Ultimaker Cura ${CURA_VERSION_MAJOR}.${CURA_VERSION_MINOR}")
+set(CPACK_PACKAGE_EXECUTABLES Cura "Cura IMADE3D Edition ${CURA_VERSION_MAJOR}.${CURA_VERSION_MINOR}.${CURA_VERSION_PATCH}")
+set(CPACK_PACKAGE_INSTALL_DIRECTORY "Cura IMADE3D Edition ${CURA_VERSION_MAJOR}.${CURA_VERSION_MINOR}")
 
 # CPackNSIS
 set(CPACK_NSIS_ENABLE_UNINSTALL_BEFORE_INSTALL ON)
@@ -80,8 +80,8 @@ set(CPACK_NSIS_MUI_ICON ${CMAKE_SOURCE_DIR}\\\\packaging\\\\cura.ico)   # note: 
 set(CPACK_NSIS_MUI_UNIICON ${CMAKE_SOURCE_DIR}\\\\packaging\\\\cura.ico)
 set(CPACK_PACKAGE_ICON ${CMAKE_SOURCE_DIR}/packaging\\\\cura.ico)
 set(CPACK_NSIS_MENU_LINKS
-    "https://ultimaker.com/en/support/software" "Online Documentation"
-    "https://github.com/ultimaker/cura" "Development Resources"
+    "https://www.imade3d.com" "IMADE3D website"
+    "https://github.com/IMADE3D/cura" "Development Resources"
 )
 
 set(CPACK_NSIS_MUI_WELCOMEFINISHPAGE_BITMAP ${CMAKE_SOURCE_DIR}\\\\packaging\\\\cura_banner.bmp)    # note: fails with forward '/'

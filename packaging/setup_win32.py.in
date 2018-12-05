@@ -177,12 +177,12 @@ executables = [
 ]
 
 setup(
-    name = "Ultimaker Cura",
+    name = "Cura IMADE3D Edition",
     version = "@CURA_VERSION_MAJOR@.@CURA_VERSION_MINOR@.@CURA_VERSION_PATCH@",
-    description = "Ultimaker Cura",
-    long_description = "Ultimaker Cura - 3D Printing Software",
-    author = "Ultimaker B.V.",
-    url = "http://software.ultimaker.com/",
+    description = "Cura IMADE3D Edition",
+    long_description = "Cura IMADE3D Edition - 3D Printing Software",
+    author = "IMADE3D",
+    url = "http://www.imade3d.com/",
     license = "GNU LESSER GENERAL PUBLIC LICENSE (LGPL)",
 
     options = {"build_exe": build_options},
