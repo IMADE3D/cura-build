@@ -5,8 +5,8 @@
 
 find_package(Signtool REQUIRED)
 
-set(WINDOWS_IDENTITIY_PFX_FILE "THE_PFX_FILE_IS_MISSING_HERE!" CACHE STRING "PFX file, which represents the identity of the developer.")
-set(WINDOWS_IDENTITIY_PFX_PASSWORD "" CACHE STRING "Password, which unlocks the PFX file (optional)")
+GetFromEnvironmentOrCache(WINDOWS_IDENTITIY_PFX_FILE "THE_PFX_FILE_IS_MISSING_HERE!" STRING "PFX file, which represents the identity of the developer.")
+GetFromEnvironmentOrCache(WINDOWS_IDENTITIY_PFX_PASSWORD "" STRING "Password, which unlocks the PFX file (optional)")
 
 set(signtool_OPTIONS /fd SHA256 /a /f ${WINDOWS_IDENTITIY_PFX_FILE})
 
@@ -50,7 +50,7 @@ if(EXISTS ${WINDOWS_IDENTITIY_PFX_FILE})
     endif()
     add_custom_command(
         TARGET signing-installer
-        COMMAND ${SIGNTOOL_EXECUTABLE} sign ${signtool_OPTIONS} ${CURA_INSTALLER_NAME}
+        COMMAND ${SIGNTOOL_EXECUTABLE} sign ${signtool_OPTIONS} "${CURA_INSTALLER_NAME}"
         ## Other optional options:
         # /tr timestampServerUrl 
         WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
