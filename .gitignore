@@ -34,3 +34,14 @@ build
 *.mo
 resources/i18n/en
 resources/i18n/x-test
+
+#inst
+/bin/
+/cert/
+/include/
+/lib/
+/lib-mingw/
+/libs/
+/Scripts/
+/share/
+sip.exe
